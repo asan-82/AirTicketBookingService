@@ -11,11 +11,13 @@ const setupAndStartServer=()=>{
         app.use(express.urlencoded({ extended: true }));
         app.use("/api",apiRoutes);
         console.log(`Server listening on ${PORT}`);
-        if(process.env.DB_SYNC)
+        /*if(process.env.DB_SYNC)
         {
             db.sequelize.sync({alter:true});
 
         }
+            */
+           
     });
     
 }
