@@ -11,7 +11,7 @@ const createChannel = async () => {
     throw error;
   }
 };
-//binding_key is the name of the queue, EXCHANGE_NAME is the distributor name
+//binding_key is the name of the queue, EXCHANGE_NAME is the distributor name, message broker is Rabbit MQ
 const subscribeMessage = async (channel,service,binding_key) => {
   try {
     const applicationQueue=await channel.assertQueue('QUEUE_NAME');
